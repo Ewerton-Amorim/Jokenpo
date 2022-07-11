@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{   
+   
+    srand(time(0));
+    int  jogadaComputador = rand()%3+1;
+    int jogadaUsuario;
+    
+    printf("Escolha uma opção:\n 1- Pedra\n 2-Papel\n 3-Tesoura\n\n ");
+    scanf("%d", &jogadaUsuario);
+    
+    switch (jogadaComputador)
+    {
+    case 1:
+        printf("\nComputador jogou: Pedra\n");
+        switch(jogadaUsuario)
+        {
+        case 1:
+            printf("Você jogou: Pedra\n");
+            printf("Empate ");
+            break;
+        case 2:
+            printf("Você jogou: papel\n");
+            printf("Você ganhou, papel embrulha pedra");
+            break;
+        case 3:
+            printf("Você jogou: tesoura\n");
+            printf("\nComputador ganhou, pedra quebra tesoura");
+            break;
+        }
+        //caso 2 do primeiro switch case
+        break;
+    case 2:
+        printf("\nComputador jogou: Papel\n");
+        switch(jogadaUsuario)
+        {
+        case 1:
+            printf("você jogou: pedra\n");
+            printf("Computador ganhou, papel embrulha pedra\n");
+            break;
+        case 2:
+            printf("Você jogou: papel\n");
+            printf("Empate\n");
+            break;
+        case 3:
+            printf("Você jogou: tesoura\n");
+            printf("Você ganhou, tesoura corta papel\n");
+            break;
+        }
+        break;
+    case 3:
+        printf("\nComputador jogou: Tesoura\n");
+        switch(jogadaUsuario)
+        {
+        case 1:
+            printf("Você jogou: pedra\n");
+            printf("Você ganhou, pedra quebra tesoura\n");
+            break;
+        case 2:
+            printf("Voê jogou: papel\n");
+            printf("Computador ganhou, tesoura corta papel\n");
+            break;
+        case 3:
+            printf("Você jogou: tesoura\n");
+            printf("Empate\n");
+            break;
+        }
+        
+    default:
+    printf("Fim do jogo");
+    }
+    
+    
+    
+}
